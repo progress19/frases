@@ -3,10 +3,8 @@ import { Inter } from "next/font/google";
 import { Poppins } from 'next/font/google';
 import "./globals.css";
 import 'animate.css';
-import { SpeedInsights } from '@vercel/
+import { SpeedInsights } from "@vercel/speed-insights/next"
  
-injectSpeedInsights();
-
 const inter = Inter({ subsets: ["latin"] });
 
 // Cargar la fuente "Poppins"

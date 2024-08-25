@@ -1,4 +1,5 @@
 "use client";
+
 import { useState, useEffect, useRef } from "react";
 import "animate.css/animate.min.css";
 
@@ -11,14 +12,17 @@ export default function Home() {
 
   const fetchFrase = async () => {
     try {
-      const response = await fetch("http://localhost/frases/public/frase-aleatoria");
-      const data = await response.json();
+      // Activa la animación de fadeOut
       setIsFadingOut(true);
-      setTimeout(() => {
+      
+      // Espera que el efecto de fadeOut termine antes de actualizar la frase
+      setTimeout(async () => {
+        const response = await fetch("http://localhost/frases/public/frase-aleatoria");
+        const data = await response.json();
         setFrase(data.frase);
         setIsFadingOut(false);
         setAnimationKey(prevKey => prevKey + 1);
-      }, 500);
+      }, 500); // La duración del fadeOut, ajusta si es necesario
     } catch (error) {
       console.error("Error al obtener la frase:", error);
     }

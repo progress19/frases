@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect, useRef } from "react";
 import "animate.css/animate.min.css";
 
@@ -8,7 +7,7 @@ export default function Home() {
   const [isFadingOut, setIsFadingOut] = useState(false);
   const [animationKey, setAnimationKey] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null); // Asegúrate de especificar el tipo
+  const audioRef = useRef<HTMLAudioElement | null>(null); // Especifica el tipo
 
   const fetchFrase = async () => {
     try {
@@ -54,7 +53,7 @@ export default function Home() {
         </h1>
       </div>
 
-      <audio ref={audioRef} src="/path/to/your/instrumental-music.mp3" loop />
+      <audio ref={audioRef} src="music.mp3" loop />
       
       <button
         onClick={toggleMusic}

@@ -1,7 +1,8 @@
 import { TwitterApi } from 'twitter-api-v2';
 import { NextResponse } from 'next/server';
-
+/*
 export async function POST(req: Request) {
+
   try {
     const { status } = await req.json();
 
@@ -23,4 +24,6 @@ export async function POST(req: Request) {
     console.error('Error al publicar el tweet:', error);
     return NextResponse.json({ message: 'Error al publicar el tweet', error: error.message }, { status: 500 });
   }
+
 }
+*/

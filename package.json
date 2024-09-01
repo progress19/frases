@@ -15,7 +15,8 @@
     "animate.css": "^4.1.1",
     "next": "14.2.6",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "twitter-api-v2": "^1.17.2"
   },
   "devDependencies": {
     "@types/node": "^20",

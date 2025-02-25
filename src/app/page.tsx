@@ -12,7 +12,7 @@ export default function Home() {
 
   const fetchFrase = async () => {
     try {
-      const response = await fetch("https://frases-api.mauriciolavilla.net.ar/public/frase-aleatoria");
+      const response = await fetch("https://frases-backend.mauriciolavilla.net/public/frase-aleatoria");
       const data = await response.json();
       return data.frase;
     } catch (error) {

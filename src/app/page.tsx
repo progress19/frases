@@ -30,7 +30,7 @@ export default function Home() {
   const fetchFrase = async (tipo: string) => {
     try {
       const endpoint = fraseTypes[tipo as keyof typeof fraseTypes] || "frase-aleatoria";
-      const response = await fetch(`https://frases-backend.mauriciolavilla.net/public/${endpoint}`);
+      const response = await fetch(`https://mauriciolavilla.net/admin/public/${endpoint}`);
       const data = await response.json();
       return data.frase;
     } catch (error) {
